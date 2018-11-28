@@ -3,7 +3,7 @@ let q = 11;
 
 function cryptoModule(a,b){
   result = a*b
-  console.log(result)
+  console.log(result + ' crypto')
   return result
 }
 function euler(a,b){
@@ -17,9 +17,10 @@ let a  = euler(p,q)
 let b = cryptoModule(p,q)
 
 function eNumber(arg1,arg2){
-  for( let i=0; i < arg2; i++){
-    if(euklides(arg1, i) === 1){
+  for( let i=2; i < arg2; i++){
+    if(euklides(arg1,i) == 1){
       console.log(i)
+      break;
     }
   }
 }
@@ -34,5 +35,5 @@ function euklides(a,b){
       a = a -b
     }
   }
-  console.log(a)
+  return a
 }
