@@ -19,13 +19,13 @@ let b = cryptoModule(p,q)
 function eNumber(arg1,arg2){
   for( let i=2; i < arg2; i++){
     if(euklides(arg1,i) == 1){
-      console.log(i)
-      break;
+      return i
     }
   }
 }
 
-eNumber(a,b)
+let eValue = eNumber(a,b)
+console.log(eValue + 'liczba e')
 
 function euklides(a,b){
   while(a != b){
@@ -37,3 +37,29 @@ function euklides(a,b){
   }
   return a
 }
+
+function dNumber(arg1,arg2){
+  let x = 1
+  while (x*arg2%arg1 != 1){
+    x++
+  }
+  return(x)
+}
+console.log(dNumber(a,eValue) + 'dNumber')
+
+let publicKey = function(){
+  arr = [];
+  arr.push(eValue)
+  arr.push(b)
+  return arr
+}
+
+let secretKey = function(){
+  arr = [];
+  arr.push(dNumber(a,eValue))
+  arr.push(b)
+  return arr
+}
+
+console.log(secretKey())
+console.log(publicKey())

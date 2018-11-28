@@ -6,7 +6,14 @@ body{
 .textField{
   height: 500px;
   width: 400px;
-  opacity: 0.4;
+  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+}
+
+.textField:hover{
+  border: groove;
 }
 
 .mainContainer{
