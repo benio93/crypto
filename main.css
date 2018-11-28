@@ -1,0 +1,34 @@
+body{
+  background-image: url(images/matrix.jpg);
+  color: white;
+}
+
+.textField{
+  height: 500px;
+  width: 400px;
+  opacity: 0.4;
+}
+
+.mainContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer{
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainFigure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
